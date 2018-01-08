@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--日历-->
+    <declare-styleable name="WeekBarView">
+        <attr name="week_text_color" format="color"/>
+        <attr name="week_text_size" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="MonthCalendarView">
+        <attr name="month_selected_text_color" format="color"/>
+        <attr name="month_selected_circle_color" format="color"/>
+        <attr name="month_selected_circle_today_color" format="color"/>
+        <attr name="month_normal_text_color" format="color"/>
+        <attr name="month_today_text_color" format="color"/>
+        <attr name="month_lunar_text_color" format="color"/>
+        <!--圆点颜色-->
+        <attr name="month_hint_circle_color" format="color"/>
+        <attr name="month_holiday_color" format="color"/>
+        <!--上个月或者下个月的颜色,设置成透明就不显示上个月与下个月的一些日期了-->
+        <attr name="month_last_or_next_month_text_color" format="color"/>
+        <attr name="month_day_text_size" format="integer"/>
+        <attr name="month_day_lunar_text_size" format="integer"/>
+        <attr name="month_show_task_hint" format="boolean"/>
+        <attr name="month_show_lunar" format="boolean"/>
+        <attr name="month_show_holiday_hint" format="boolean"/>
+        <attr name="month_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeekCalendarView">
+        <attr name="week_selected_text_color" format="color"/>
+        <attr name="week_selected_circle_color" format="color"/>
+        <attr name="week_selected_circle_today_color" format="color"/>
+        <attr name="week_normal_text_color" format="color"/>
+        <attr name="week_today_text_color" format="color"/>
+        <!--week_hint_circle_color 圆点颜色-->
+        <attr name="week_hint_circle_color" format="color"/>
+        <attr name="week_holiday_color" format="color"/>
+        <attr name="week_lunar_text_color" format="color"/>
+        <attr name="week_day_text_size" format="integer"/>
+        <attr name="week_day_lunar_text_size" format="integer"/>
+        <attr name="week_show_task_hint" format="boolean"/>
+        <attr name="week_show_lunar" format="boolean"/>
+        <attr name="week_show_holiday_hint" format="boolean"/>
+        <attr name="week_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScheduleLayout">
+        <attr name="default_view">
+            <enum name="month" value="0"/>
+            <enum name="week" value="1"/>
+        </attr>
+        <attr name="auto_change_month_row" format="boolean"/>
+    </declare-styleable>
+</resources>

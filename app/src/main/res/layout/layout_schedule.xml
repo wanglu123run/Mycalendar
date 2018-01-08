@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_alignWithParentIfMissing="true"
+              android:orientation="vertical">
+
+
+
+    <!--<com.jeek.calendar.widget.calendar.WeekBarView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/week_bar_height"
+        android:background="@color/calendar_bg_color"
+        app:week_text_size="@integer/calendar_text_size"/>-->
+    <com.calendar.WeekBarView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/week_bar_height"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#fff"
+        app:week_text_size="@integer/calendar_text_size"/>
+
+    <com.calendar.schedule.ScheduleLayout
+        android:id="@+id/slSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:auto_change_month_row="true"
+        app:default_view="month">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rlMonthCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<com.jeek.calendar.widget.calendar.month.MonthCalendarView
+                        android:id="@+id/mcvCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/month_calendar_height"
+                        android:background="@color/calendar_bg_color"
+                        android:overScrollMode="never"
+                        app:month_day_text_size="@integer/calendar_text_size"
+                        app:month_holiday_color="@color/holiday_text_color"
+                        app:month_selected_circle_color="@color/select_circle_color"
+                        app:month_show_holiday_hint="true"
+                        app:month_show_lunar="true"
+                        app:month_show_task_hint="true"/>-->
+                    <!--月份视图-->
+                    <com.calendar.month.MonthCalendarView
+                        android:id="@+id/mcvCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/month_calendar_height"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="#fff"
+                        android:overScrollMode="never"
+                        app:month_hint_circle_color="#ffff4301"
+                        app:month_last_or_next_month_text_color="#00000000"
+                        app:month_day_text_size="@integer/calendar_text_size"
+                        app:month_holiday_color="@color/holiday_text_color"
+                        app:month_selected_circle_color="@color/select_circle_color"
+                        app:month_show_holiday_hint="false"
+                        app:month_show_lunar="false"
+                        app:month_show_task_hint="true"/>
+                </RelativeLayout>
+
+
+                <!--推上去之后的周视图-->
+                <com.calendar.week.WeekCalendarView
+                    android:id="@+id/wcvCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/week_calendar_height"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="#fff"
+                    android:overScrollMode="never"
+                    android:visibility="gone"
+                    app:week_hint_circle_color="#ffff4301"
+                    app:week_day_text_size="@integer/calendar_text_size"
+                    app:week_holiday_color="@color/holiday_text_color"
+                    app:week_selected_circle_color="@color/select_circle_color"
+                    app:week_show_holiday_hint="false"
+                    app:week_show_lunar="false"
+                    app:week_show_task_hint="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlScheduleList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <!--显示列表的RecyclerView-->
+                <com.calendar.schedule.ScheduleRecyclerView
+                    android:id="@+id/rvScheduleList"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="75dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:id="@+id/tv_schedule_hint"
+                    android:visibility="visible"
+                    android:text="无服务记录"
+                    android:layout_marginTop="75dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center" />
+                <!--如果上面的列表不显示，就显示出了这个-->
+                <LinearLayout
+                    android:id="@+id/rlNoTask"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:background="#fff">
+
+                    <include
+                        android:id="@+id/include_color_rectangle"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        layout="@layout/layout_include_color_rectangle"/>
+                    <View
+                        android:background="#ecf0f4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"/>
+                    <TextView
+                        android:id="@+id/tv_myschedule_title"
+                        android:text="服务记录"
+                        android:paddingLeft="16dp"
+                        android:gravity="center_vertical"
+                        android:textColor="#14263c"
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.calendar.schedule.ScheduleLayout>
+
+</LinearLayout>

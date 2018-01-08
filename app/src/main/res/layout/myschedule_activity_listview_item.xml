@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_myscheduleitem_timelayout"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_marginLeft="3dp"
+        android:orientation="vertical"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_myscheduleitem_time"
+            android:text="08:10"
+            android:textSize="12sp"
+            android:textColor="#878f99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_myscheduleitem_ampm"
+            android:text="am"
+            android:textSize="10sp"
+            android:textColor="#c9cbcf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view_myschedule_line1"
+        android:layout_toRightOf="@+id/ll_myscheduleitem_timelayout"
+        android:layout_alignTop="@+id/rl_myscheduleitem_desc"
+        android:layout_alignBottom="@+id/rl_myscheduleitem_desc"
+        android:background="#eaecf1"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/iv_myscheduleitem_icon"
+        android:layout_toRightOf="@+id/ll_myscheduleitem_timelayout"
+        android:layout_alignTop="@+id/rl_myscheduleitem_desc"
+        android:layout_marginLeft="-8.5dp"
+        android:src="@mipmap/icon_myscheduleitem_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/rl_myscheduleitem_desc"
+        android:layout_toRightOf="@+id/iv_myscheduleitem_icon"
+        android:layout_marginLeft="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_myscheduleitem_title"
+            android:text=""
+            android:textColor="#6d7684"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

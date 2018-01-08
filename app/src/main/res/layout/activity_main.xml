@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_myschedule_title"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_myschedule_left"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@mipmap/icon_arrow_datepicker_title_left"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_myschedule_year"
+                android:text="2017年"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/tv_myschedule_month"
+                android:text="2月"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/tv_myschedule_year"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_myschedule_right"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_arrow_datepicker_title_right"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:text="确定"
+            android:textColor="#e42929"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:text="自定义按钮"
+            android:textColor="#e42929"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/layout_schedule"
+        android:layout_below="@+id/rl_myschedule_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>
